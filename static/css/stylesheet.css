@@ -1,0 +1,29 @@
+header{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white    ;
+}
+
+.calculator{
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    height:400px;
+    width:750px;
+    float:center;
+}
+
+p{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+
+}
+
+html{
+
+    background-color:black;
+
+}
+

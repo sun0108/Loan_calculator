@@ -1,19 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-  <head>
-    <meta charset="utf-8">
-    <title>{{ pageTitle }}</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
-  <header> </header> 
-</head>
-
-  <body>
-
-      {% block body %}
-
-	  {% endblock %}
-
- </body>
-
-</html>
+{% block body %}
+    <form action="" method="POST"> 
+    <p>
+    <label for='Loan_amount'>	
+        Loan amount: <input type="text" name='loan_amount' id='Loan_amount' placeholder="Enter your loan amount here" autofocus required>
+    </label>
+    </p>
+    <p>
+        <label for='Payment_per_year'>	
+            Payment per year: <input type="text" name='payment_per_year' id='Payment_per_year' placeholder="Number of payment per year " required>
+        </label>
+     </p>
+     <p>
+        <label for='Number_of_year'>	
+            Number of year: <input type="text" name='number_of_year' id='Number_of_year' placeholder="Number of year " required>
+        </label>
+     </p>
+     <p>
+        <label for='Annual_rate'>	
+            Annual rate: <input type="text" name='annual_rate' id='Annual_rate' placeholder="Annual rate" required>
+        </label>
+     </p>
+     <p>
+        <label for='Payment_period'>	
+            Payment period: <input type="text" name='payment_period' id='Payment_period' placeholder="Number of payment periods" required>
+        </label>
+     </p>
+     <input type="submit" value="Submit" >
+     <input type="reset" value="Clear" >
+    </form>
+    <img src="{{ url_for('static', filename='images/calculator.jpg') }}" class="calculator" />
+    {% endblock %}
