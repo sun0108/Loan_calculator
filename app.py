@@ -17,7 +17,9 @@ def index():
             D=((1+i)**n-1)/(i*( 1+ i)**n)
             P=Loan_amount/D
 
-            print(f'Your loan payment is {P}$')
+            print('Your loan payment is ${0:,.2f}'.format(P))
+            Loan_estimate='Your loan payment is ${0:,.2f}'.format(P)
+            return render_template('index.html',pageTitle='Calculator main page',display=Loan_estimate)
     
         return render_template('index.html',pageTitle='Calculator main page')
 
